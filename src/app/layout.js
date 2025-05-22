@@ -1,15 +1,56 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import localFont from 'next/font/local'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const sfProRounded = localFont({
+  src: [
+    {
+      path: '../assets/fonts/SF-Pro-Rounded-Black.otf',
+      weight: '900',
+      style: 'normal',
+    },
+    {
+      path: '../assets/fonts/SF-Pro-Rounded-Heavy.otf',
+      weight: '800',
+      style: 'normal',
+    },
+    {
+      path: '../assets/fonts/SF-Pro-Rounded-Bold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../assets/fonts/SF-Pro-Rounded-Semibold.otf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../assets/fonts/SF-Pro-Rounded-Medium.otf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../assets/fonts/SF-Pro-Rounded-Regular.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../assets/fonts/SF-Pro-Rounded-Light.otf',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../assets/fonts/SF-Pro-Rounded-Thin.otf',
+      weight: '200',
+      style: 'normal',
+    },
+    {
+      path: '../assets/fonts/SF-Pro-Rounded-Ultralight.otf',
+      weight: '100',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-sf-pro-rounded',
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -19,9 +60,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${sfProRounded.variable} antialiased`}>
         {children}
       </body>
     </html>
