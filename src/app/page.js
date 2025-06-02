@@ -1,5 +1,6 @@
 import { Zen_Dots } from 'next/font/google';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
+import Cards from 'src/components/cards';
 
 const zenDots = Zen_Dots({ subsets: ['latin'], weight: '400' });
 
@@ -26,16 +27,21 @@ export default function Home() {
             </div>
           </div>
         </header>
-        <div className="flex flex-col items-center justify-center h-full gap-auto" /*Main Content*/>
+        <div className="flex flex-col items-center justify-around h-full gap-auto" /*Main Content*/>
           <div /*Main*/>
-            <div className="w-100">
-              <h1 className='text-6xl text-black font-bold'>A nova era da produção musical com IA.</h1>
+            <div className="w-200 text-center">
+              <h1 className='text-6xl text-black font-bold'>
+                A nova era da produção musical com IA.
+              </h1>
             </div>
-            <div>
+            <div className="w-full text-center p-4">
+              <button className='d-flex justify-content-center align-items-center text-2xl font-semibold text-black rounded-2xl cursor-pointer py-3 px-5 border-1 border-white/2 bg-white button'>
+                Baixar o Kivo
+              </button>
             </div>
           </div>
-          <div /*Cards*/>
-
+          <div className='h-50' /*Cards*/>
+            <Cards />
           </div>
         </div>
       </section>
